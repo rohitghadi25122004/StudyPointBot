@@ -12,8 +12,11 @@ requiredEnv.forEach((key) => {
 });
 
 module.exports = {
-    port: process.env.port || 10000,
+    port: process.env.PORT || 10000,
     verifyToken: process.env.VERIFY_TOKEN,
     whatsappToken: process.env.WHATSAPP_TOKEN,
-    phoneNumberId: process.env.PHONE_NUMBER_ID
+    phoneNumberId: process.env.PHONE_NUMBER_ID,
+    appSecret: process.env.APP_SECRET || "",
+    apiVersion: process.env.API_VERSION || "v21.0",
+    businessPhone: process.env.BUSINESS_PHONE || "919326166821"
 }
